@@ -11,7 +11,7 @@
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
-  finish
+	finish
 endif
 
 " Use Vim settings, rather than Vi settings (much better!).
@@ -28,14 +28,14 @@ set nobackup        " do not keep a backup file
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
-  set mouse=a
+	set mouse=a
 endif
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
+	syntax on
+	set hlsearch
 endif
 
 set background=dark "设置背景为深色
@@ -45,9 +45,9 @@ if has("gui_running")
 	set nowrap
 	set guioptions+=b
 
-	set guifont=Monospace\ 12
+	set guifont=Monospace\ 13
 
-	set ch=2		" Make command line two lines high
+	set ch=1		" Make command line two lines high
 
 	set mousehide		" Hide the mouse when typing text
 endif
@@ -103,35 +103,43 @@ set autowrite
 "Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
+	" Enable file type detection.
+	" Use the default filetype settings, so that mail gets 'tw' set to 72,
+	" 'cindent' is on in C files, etc.
+	" Also load indent files, to automatically do language-dependent indenting.
+	filetype plugin indent on
 
-  set cinoptions=g0
-  " Put these in an autocmd group, so that we can delete them easily.
-  augroup vimrcEx
-  au!
+	set cinoptions=g0
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+	set autoindent		" always set autoindenting on
 
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  " Also don't do it when the mark is in the first line, that is the default
-  " position when opening a file.
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
+	"""""""""""""""""""""""""""""""""""""""""""""""""
+	"设置状态行一直显示
+	set laststatus=2
+	"设置状态栏显示的样式
+	set statusline=%f%m%r%h%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%=[%L]\ %l,%c%V\ \ %P
 
-  augroup END
+	" Put these in an autocmd group, so that we can delete them easily.
+	augroup vimrcEx
+		au!
+
+		" For all text files set 'textwidth' to 78 characters.
+		autocmd FileType text setlocal textwidth=78
+
+		" When editing a file, always jump to the last known cursor position.
+		" Don't do it when the position is invalid or when inside an event handler
+		" (happens when dropping a file on gvim).
+		" Also don't do it when the mark is in the first line, that is the default
+		" position when opening a file.
+		autocmd BufReadPost *
+					\ if line("'\"") > 1 && line("'\"") <= line("$") |
+					\   exe "normal! g`\"" |
+					\ endif
+
+	augroup END
 
 else
 
-  set autoindent		" always set autoindenting on
 
 endif " has("autocmd")
 
@@ -139,14 +147,14 @@ endif " has("autocmd")
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
 if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+	command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+				\ | wincmd p | diffthis
 endif
 
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
+	source /etc/vim/vimrc.local
 endif
 
 """""""""""""""""""""""""""""""""""""""
