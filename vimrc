@@ -193,7 +193,7 @@ let g:mwDefaultHighlightingPalette='extended'
 let g:mwDefaultHighlightingNum = 9
 
 " autocomplpop plugin setting
-let g:acp_behaviorSnipmateLength = 1
+"let g:acp_behaviorSnipmateLength = 1
 
 " minibufexplorer plugin 设置
 "let g:miniBufExplSplitBelow=0   " 在当前窗口的上方打开新窗口
