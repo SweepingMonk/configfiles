@@ -45,7 +45,7 @@ if has("gui_running")
 	set nowrap
 	set guioptions+=b
 
-	set guifont=Monospace\ 13
+	set guifont=Monospace\ 12
 
 	set ch=1		" Make command line two lines high
 
