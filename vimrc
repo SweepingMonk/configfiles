@@ -201,6 +201,7 @@ let g:mwDefaultHighlightingPalette='extended'
 let g:mwDefaultHighlightingNum = 9
 
 " autocomplpop plugin setting
+let g:acp_behaviorXmlOmniLength = -1
 "let g:acp_behaviorSnipmateLength = 1
 
 " minibufexplorer plugin 设置
