@@ -17,7 +17,28 @@ endif
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+filetype off "vundle required 
 
+set rtp+=~/.vim/bundle/vundle "add the vundle folder to runtimepath
+call vundle#rc()
+
+"let vundle manage vundle, required
+Bundle 'gmarik/vundle'
+
+"my bundles
+"
+"original repos on github
+"vim-scripts repos
+Bundle 'tango-morning.vim'
+Bundle 'AutoComplPop'
+Bundle 'OmniCppComplete'
+Bundle 'The-NERD-tree'
+Bundle 'The-NERD-Commenter'
+Bundle 'Tagbar'
+Bundle 'bufexplorer.zip'
+Bundle 'UltiSnips'
+Bundle 'xml.vim'
+"non github repos
 
 "if has("vms")
 "  set nobackup		" do not keep a backup file, use versions instead
