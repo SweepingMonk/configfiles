@@ -190,7 +190,7 @@ map <C-F12> :!ctags -R --c++-kinds=+px --fields=+iaS --extra=+q .<CR>
 set tags +=/usr/include/tags
 
 "clang_complete 设置
-let g:clang_complete_auto=1
+let g:clang_complete_select=1
 let g:clang_snippets=1
 let g:clang_snippets_engine="ultisnips"
 
