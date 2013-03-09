@@ -28,10 +28,10 @@ Bundle 'gmarik/vundle'
 "my bundles
 "
 "original repos on github
+Bundle 'Rip-Rip/clang_complete'
 "vim-scripts repos
 Bundle 'tango-morning.vim'
 Bundle 'AutoComplPop'
-Bundle 'OmniCppComplete'
 Bundle 'The-NERD-tree'
 Bundle 'The-NERD-Commenter'
 Bundle 'Tagbar'
@@ -187,9 +187,12 @@ nmap <silent> <F2> <Esc>:NERDTreeToggle<RETURN>		"NERDTree开关映射F2
 let NERDTreeWinSize=28
 "Ctags 设置
 map <C-F12> :!ctags -R --c++-kinds=+px --fields=+iaS --extra=+q .<CR>
-set tags +=/media/BackUp/Workspaces/ctags/tags
-" omnicppcomplete 设置
-let OmniCpp_SelectFirstItem = 2
+set tags +=/usr/include/tags
+
+"clang_complete 设置
+let g:clang_complete_auto=1
+let g:clang_snippets=1
+let g:clang_snippets_engine="ultisnips"
 
 "Tagbar Plugin 设置
 nmap <silent> <F3> <Esc>:TagbarToggle<CR> 
@@ -235,19 +238,3 @@ let g:acp_behaviorXmlOmniLength = -1
 "let g:miniBufExplMapWindowNavArrows = 1 " 让mbe可以使用control-m + 键盘方向键来在窗口移动
 "let g:miniBufExplMapCTabSwitchBufs = 1  
 "let g:miniBufExplModSelTarget = 1
-
-"winmanager plugin 设置
-"nmap <silent> <M-m> :WMToggle<CR>    "快捷键映射
-"let g:persistentBehaviour=0      " 退出其他窗口之后自动退出
-"let g:bufExplorerMaxHeight=20    " bufexplorer最大高度
-"let g:NERDTree_title="[NERDTree]"
-"let g:winManagerWindowLayout="NERDTree|BufExplorer"
-"
-"function! NERDTree_Start()
-"    exec 'NERDTree'
-"endfunction
-"
-"function! NERDTree_IsValid()
-"    return 1
-"endfunction
-
