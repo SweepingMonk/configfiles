@@ -20,6 +20,7 @@ set nocompatible
 filetype off "vundle required 
 
 set rtp+=~/.vim/bundle/vundle "add the vundle folder to runtimepath
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim "add the powerline folder to runtimepath
 call vundle#rc()
 
 "let vundle manage vundle, required
@@ -29,14 +30,15 @@ Bundle 'gmarik/vundle'
 "
 "original repos on github
 Bundle 'Rip-Rip/clang_complete'
+Bundle 'SirVer/ultisnips'
+Bundle 'Lokaltog/powerline'
 "vim-scripts repos
-Bundle 'tango-morning.vim'
+Bundle 'Tango2'
 Bundle 'AutoComplPop'
 Bundle 'The-NERD-tree'
 Bundle 'The-NERD-Commenter'
 Bundle 'Tagbar'
 Bundle 'bufexplorer.zip'
-Bundle 'UltiSnips'
 Bundle 'xml.vim'
 "non github repos
 
@@ -62,7 +64,7 @@ endif
 set background=dark "设置背景为深色
 
 if has("gui_running")
-	colorscheme tango-morning
+	colorscheme tango2
 	set nowrap
 	set guioptions+=b
 
@@ -138,7 +140,7 @@ if has("autocmd")
 	"设置状态行一直显示
 	set laststatus=2
 	"设置状态栏显示的样式
-	set statusline=%f%m%r%h%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%=[%L]\ %l,%c%V\ \ %P
+	"set statusline=%f%m%r%h%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%=[%L]\ %l,%c%V\ \ %P
 
 	" Put these in an autocmd group, so that we can delete them easily.
 	augroup vimrcEx
@@ -190,9 +192,15 @@ map <C-F12> :!ctags -R --c++-kinds=+px --fields=+iaS --extra=+q .<CR>
 set tags +=/usr/include/tags
 
 "clang_complete 设置
-let g:clang_complete_select=1
+let g:clang_auto_select=1
 let g:clang_snippets=1
 let g:clang_snippets_engine="ultisnips"
+let g:clang_complete_macros=1
+
+"ultisnips 设置
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 "Tagbar Plugin 设置
 nmap <silent> <F3> <Esc>:TagbarToggle<CR> 
