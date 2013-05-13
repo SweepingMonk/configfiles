@@ -65,7 +65,7 @@ set background=dark "设置背景为深色
 
 if has("gui_running")
 	colorscheme tango2
-	set nowrap
+	"set nowrap
 	set guioptions+=b
 
 	set guifont=Monospace\ 12
@@ -198,6 +198,8 @@ let g:clang_snippets_engine="ultisnips"
 let g:clang_complete_macros=1
 
 "ultisnips 设置
+let g:UltiSnipsSnippetsDir="~/.vim/myultisnips/"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "myultisnips"]
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
