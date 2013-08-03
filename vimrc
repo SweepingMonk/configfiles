@@ -34,7 +34,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/powerline'
 "vim-scripts repos
 Bundle 'Tango2'
-Bundle 'AutoComplPop'
+"Bundle 'AutoComplPop'
 Bundle 'The-NERD-tree'
 Bundle 'The-NERD-Commenter'
 Bundle 'Tagbar'
