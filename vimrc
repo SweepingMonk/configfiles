@@ -22,7 +22,7 @@ Plugin 'gmarik/Vundle.vim'
 
 "plugins list
 "original repos on github
-Plugin 'SirVer/ultisnips' 
+"Plugin 'SirVer/ultisnips' 
 Plugin 'bling/vim-airline'
 Plugin 'Raimondi/delimitMate'
 "Plugin 'Valloric/YouCompleteMe'
