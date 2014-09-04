@@ -22,14 +22,20 @@ Plugin 'gmarik/Vundle.vim'
 
 "plugins list
 "original repos on github
-"Plugin 'SirVer/ultisnips' 
+if has("python") || has("python3")
+    Plugin 'SirVer/ultisnips' 
+    if v:version > 703 || v:version == 703 && has("patch584")
+        if !(has("win32") || has("win64"))
+            Plugin 'Valloric/YouCompleteMe'
+        endif
+    endif
+endif
 Plugin 'bling/vim-airline'
 Plugin 'Raimondi/delimitMate'
-"Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-"Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'tomasr/molokai'
 Plugin 'majutsushi/tagbar'
 
