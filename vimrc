@@ -36,6 +36,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'hynek/vim-python-pep8-indent'
+Bundle 'jlanzarotta/bufexplorer'
 Plugin 'tomasr/molokai'
 Plugin 'majutsushi/tagbar'
 
@@ -65,6 +66,9 @@ set tabstop=4		"set tab width as 4
 set softtabstop=4
 set shiftwidth=4
 autocmd FileType python set expandtab  "文件类型为python时，将tab扩展为空格
+if exists("+colorcolumn")
+    set colorcolumn=80
+endif
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -74,6 +78,9 @@ syntax on     "语法高亮
 
 set autoindent		" 自动对齐
 set cinoptions=g0
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "鼠标设置
@@ -187,5 +194,9 @@ let g:bufExplorerSortBy='number'     " Sort by the buffer's number.
 let g:bufExplorerShowDirectories=0   " Don't show directories.
 let g:bufExplorerDefaultHelp=0       " Do not show default help.
 autocmd BufWinEnter \[BufExplorer\] :setlocal nonumber 
+
+
+" vim-airline plugin settings
+let g:airline#extensions#bufferline#enabled = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
