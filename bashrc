@@ -93,6 +93,7 @@ alias ping='ping -c 5'
 alias df='df -h'
 alias du='du -c -h'
 alias gedit='gedit -b'
+alias grep='grep -i --color=auto'
 #alias suspend='sudo bash -c "sleep 1h; pm-suspend"'
 
 # Add an "alert" alias for long running commands.  Use like so:
