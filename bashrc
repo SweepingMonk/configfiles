@@ -93,6 +93,9 @@ alias ping='ping -c 5'
 alias df='df -h'
 alias du='du -c -h'
 alias gedit='gedit -b'
+
+alias sshdev='ssh -p 32200 gzwangxiang@10.63.2.35'
+alias sshrouter='ssh root@192.168.1.1'
 #alias suspend='sudo bash -c "sleep 1h; pm-suspend"'
 
 # Add an "alert" alias for long running commands.  Use like so:

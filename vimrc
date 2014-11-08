@@ -103,7 +103,7 @@ if has("gui_running")
 	if has("win32") || has("win64")
 		set guifont=Consolas:h12
 	else
-		set guifont=Monospace\ 11
+		set guifont=Monospace\ 12
 	endif
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
