@@ -1,0 +1,6 @@
+# ignore some emacs config files
+elpa/
+site-lisp/*
+*~
+auto-save-list/
+smex-items
