@@ -10,6 +10,7 @@
 (global-linum-mode)
 (setq make-backup-files nil)
 (setq show-paren-mode t)
+(global-auto-revert-mode t)
 
 ;; initialize installed packages
 (require 'init-elpa)
