@@ -9,6 +9,7 @@
 (line-number-mode)
 (global-linum-mode)
 (setq make-backup-files nil)
+(setq show-paren-mode t)
 
 ;; initialize installed packages
 (require 'init-elpa)
@@ -17,5 +18,6 @@
 (require 'init-evil)
 (require 'init-yasnippet)
 (require 'init-tabbar)
-
+(require 'init-web)
+;(require 'init-powerline)
 

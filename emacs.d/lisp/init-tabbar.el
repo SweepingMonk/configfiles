@@ -4,8 +4,8 @@
 (tabbar-mode 1)
 
 ;; Key-binding settings
-(global-set-key (kbd "M-p") 'tabbar-backward-tab)
-(global-set-key (kbd "M-n") 'tabbar-forward-tab)
+(global-set-key (kbd "M-p") 'tabbar-backward)
+(global-set-key (kbd "M-n") 'tabbar-forward)
 
 ;;设置tabbar的外观
 ;;设置默认主题：字体，前景和背景色，大小
