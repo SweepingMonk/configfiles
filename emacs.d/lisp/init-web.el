@@ -15,4 +15,7 @@
 (setq web-mode-engines-alist
       '(("django" . "\\.html?\\'")))
 
+(setq web-mode-markup-indent-offset 2)
+;; enable auto pairing
+;;(setq web-mode-enable-auto-pairing t)
 (provide 'init-web)

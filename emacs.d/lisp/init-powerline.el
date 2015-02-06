@@ -1,4 +1,4 @@
-;; Configuration about powerline
+;; configuration for powerline
 (require-package 'powerline)
 (require-package 'powerline-evil)
 
