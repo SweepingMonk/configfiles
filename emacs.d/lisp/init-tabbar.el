@@ -8,39 +8,33 @@
 
 ;;设置tabbar的外观
 ;;设置默认主题：字体，前景和背景色，大小
-(set-face-attribute 'tabbar-default nil
-		    :family "Monospace"
-		    :background "#gray20"
-		    :foreground "#gray20"
-		    :box '(:line-width 1 :color "gray20" :style nil))
+(defun custom-tabbar-face ()
+  (progn
+    (set-face-attribute 'tabbar-default nil
+			:background "white"
+			:foreground "cyan"
+			:height 0.8)
+    (set-face-attribute 'tabbar-selected nil
+			:background "white"
+			:foreground "magenta")
+    (set-face-attribute 'tabbar-unselected nil
+			:background "cyan"
+			:foreground "white")
+    ))
 
-(set-face-attribute 'tabbar-unselected nil
-		    :background "gray30"
-		    :foreground "white"
-		    :box '(:line-width 5 :color "gray30" :style nil))
-
-(set-face-attribute 'tabbar-selected nil
-		    :background "gray75"
-		    :foreground "black"
-		    :box '(:line-width 5 :color "gray75" :style nil))
-
-(set-face-attribute 'tabbar-highlight nil
-		    :background "white"
-		    :foreground "black"
-		    :underline nil
-		    :box '(:line-width 5 :color "white" :style nil))
-
-(set-face-attribute 'tabbar-button nil
-		    :box '(:line-width 1 :color "gray20" :style nil))
-
-(set-face-attribute 'tabbar-separator nil
-		    :background "gray20"
-		    :height 0.6)
+(if (daemonp)
+    (add-hook 'after-make-frame-functions
+	     (lambda (frame)
+	       (progn (message "setting tabbar face")
+		      (select-frame frame)
+		      (custom-tabbar-face))))
+  (custom-tabbar-face))
 
 ;; Change padding of the tabs
 ;; we also need to set separator to avoid overlapping tabs by highlighted tabs
 (custom-set-variables
  '(tabbar-separator (quote (0.5))))
+
 ;; adding spaces
 (defun tabbar-buffer-tab-label (tab)
   "Return a label for TAB.
