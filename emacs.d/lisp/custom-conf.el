@@ -27,4 +27,9 @@
 
 ;; highlight current line
 (global-hl-line-mode t)
+
+;; save the last position of edited file
+(require 'saveplace)
+(setq-default sava-place t)
+(setq save-place-file "~/.emacs.d/saved-places")
 (provide 'custom-conf)

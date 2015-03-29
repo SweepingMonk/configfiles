@@ -89,6 +89,9 @@ alias ec="emacsclient -t"
 export ALTERNATE_EDITOR=""
 export EDITOR="ec"
 
+# enable globstar option
+shopt -s globstar
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
