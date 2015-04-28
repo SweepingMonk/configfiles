@@ -4,10 +4,22 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+function OS()
+	let l:os = ""
+	if has("win32") || has("win64")
+		let l:os = "windows"
+	elseif has("macunix") || has("mac")
+		let l:os = "mac"
+	else
+		let l:os = "linux"
+	endif
+
+	return l:os
+endfunction
 
 filetype off "vundle required
 
-if has("win32") || has("win64")
+if OS() == "windows"
 	set rtp+=$VIM/vimfiles/bundle/vundle
 	let path='$VIM/vimfiles/bundle'
 	call vundle#begin(path)
@@ -25,11 +37,6 @@ Plugin 'gmarik/Vundle.vim'
 if has("python") || has("python3")
     Plugin 'SirVer/ultisnips' 
 	Plugin 'honza/vim-snippets'
-    if v:version > 703 || v:version == 703 && has("patch584")
-        if !(has("win32") || has("win64"))
-            "Plugin 'Valloric/YouCompleteMe'
-        endif
-    endif
 endif
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'bling/vim-airline'
@@ -98,15 +105,21 @@ endif
 
 "颜色主题设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set background=dark "设置背景为深色
+if &t_Co == 256
+	colorscheme molokai
+else
+	set background=dark "设置背景为深色
+endif
 
 if has("gui_running")
 	colorscheme molokai
 	set guioptions+=b
-	if has("win32") || has("win64")
+	if OS() == "windows"
 		set guifont=Consolas:h12
+	elseif OS() == "mac"
+		set guifont=Monaco:h13
 	else
-		set guifont=Monospace\ 12
+		set guifont=Monospace\ 14
 	endif
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
