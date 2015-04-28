@@ -10,11 +10,11 @@
   (set-frame-parameter frame 'background-mode 'dark)
   (set-frame-parameter frame 'fullscreen 'fullboth)
   (set-frame-parameter frame 'font "Monaco-13")
-  (enable-theme 'solarized))
+  (enable-theme 'molokai))
 
 (defun terminal-frame-action (frame)
   (set-terminal-parameter frame 'background-mode 'dark)
-  (enable-theme 'solarized))
+  (enable-theme 'molokai))
 
 (defun add-make-frame-hook ()
     (add-hook 'after-make-frame-functions
@@ -28,7 +28,7 @@
   (add-make-frame-hook))
 
 ;; load the theme
-(load-theme 'solarized t)
+(load-theme 'molokai t)
 (if (daemonp) (add-make-frame-hook) (normal-action))
 ;(add-hook 'after-make-frame-functions
 ;	  (lambda (frame)
