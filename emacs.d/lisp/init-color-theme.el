@@ -1,20 +1,21 @@
 ;; Configuration about color-theme
 ;;(require-package 'color-theme)
-(require-package 'color-theme-molokai)
+(require-package 'molokai-theme)
 (require-package 'color-theme-solarized)
 
 ;;(require 'color-theme)
 ;;(color-theme-initialize)
+(setq my-color-theme 'solarized)
 
 (defun graphic-frame-action (frame)
   (set-frame-parameter frame 'background-mode 'dark)
   (set-frame-parameter frame 'fullscreen 'fullboth)
   (set-frame-parameter frame 'font "Monaco-13")
-  (enable-theme 'molokai))
+  (enable-theme my-color-theme))
 
 (defun terminal-frame-action (frame)
   (set-terminal-parameter frame 'background-mode 'dark)
-  (enable-theme 'molokai))
+  (enable-theme my-color-theme))
 
 (defun add-make-frame-hook ()
     (add-hook 'after-make-frame-functions
@@ -28,7 +29,7 @@
   (add-make-frame-hook))
 
 ;; load the theme
-(load-theme 'molokai t)
+(load-theme my-color-theme t)
 (if (daemonp) (add-make-frame-hook) (normal-action))
 ;(add-hook 'after-make-frame-functions
 ;	  (lambda (frame)

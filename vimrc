@@ -48,6 +48,7 @@ Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'majutsushi/tagbar'
 
 call vundle#end()            " required
@@ -106,7 +107,7 @@ endif
 "颜色主题设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if &t_Co == 256
-	colorscheme molokai
+	colorscheme solarized
 else
 	set background=dark "设置背景为深色
 endif
