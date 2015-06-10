@@ -11,6 +11,22 @@
 (line-number-mode)
 
 ;; show line number
+(unless window-system
+  (add-hook 'linum-before-numbering-hook
+	    (lambda ()
+	      (setq-local linum-format-fmt
+			  (let ((w (length (number-to-string
+					    (count-lines (point-min) (point-max))))))
+			    (concat "%" (number-to-string w) "d"))))))
+
+(defun linum-format-func (line)
+  (concat
+   (propertize (format linum-format-fmt line) 'face 'linum)
+   (propertize " " 'face 'linum)))
+
+(unless window-system
+  (setq linum-format 'linum-format-func))
+
 (global-linum-mode)
 
 ;; cancel making backup file
@@ -27,6 +43,10 @@
 
 ;; highlight current line
 (global-hl-line-mode t)
+
+;;cc mode setting
+(setq c-default-style "linux"
+      c-basic-offset 4)
 
 ;; save the last position of edited file
 (require 'saveplace)
