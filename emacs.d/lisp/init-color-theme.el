@@ -8,8 +8,11 @@
 (setq my-color-theme 'solarized)
 
 (defun graphic-frame-action (frame)
-  (set-frame-parameter frame 'background-mode 'dark)
-  (set-frame-parameter frame 'fullscreen 'fullboth)
+  (set-frame-parameter frame 'background-mode 'light)
+  (set-frame-parameter frame 'width 100)
+  (set-frame-parameter frame 'height 40)
+  (set-frame-parameter frame 'left 200)
+  (set-frame-parameter frame 'top 40)
   (set-frame-parameter frame 'font "Monaco-13")
   (enable-theme my-color-theme))
 
@@ -45,3 +48,4 @@
 ;  (color-theme-solarized-dark))
 
 (provide 'init-color-theme)
+;;; init-color-theme.el ends here
