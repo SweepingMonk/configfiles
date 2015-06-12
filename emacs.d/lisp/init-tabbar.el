@@ -11,22 +11,21 @@
 (defun custom-tabbar-face ()
   (progn
     (set-face-attribute 'tabbar-default nil
-			:background "white"
-			:foreground "cyan"
+			:background (face-attribute 'mode-line-inactive :background)
+			:foreground (face-attribute 'mode-line-inactive :foreground)
 			:height 0.8)
     (set-face-attribute 'tabbar-selected nil
-			:background "white"
-			:foreground "magenta")
+			:background (face-attribute 'mode-line :background)
+			:foreground (face-attribute 'mode-line :foreground))
     (set-face-attribute 'tabbar-unselected nil
-			:background "cyan"
-			:foreground "white")
+			:background (face-attribute 'mode-line-inactive :background)
+			:foreground (face-attribute 'mode-line-inactive :foreground))
     ))
 
 (if (daemonp)
     (add-hook 'after-make-frame-functions
 	     (lambda (frame)
-	       (progn (message "setting tabbar face")
-		      (select-frame frame)
+	       (progn (select-frame frame)
 		      (custom-tabbar-face))))
   (custom-tabbar-face))
 
