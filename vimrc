@@ -41,7 +41,7 @@ endif
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'bling/vim-airline'
 Plugin 'Raimondi/delimitMate'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'hynek/vim-python-pep8-indent'
@@ -106,10 +106,10 @@ endif
 
 "颜色主题设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set background=dark "设置背景为深色
+
 if &t_Co == 256
 	colorscheme solarized
-else
-	set background=dark "设置背景为深色
 endif
 
 if has("gui_running")
