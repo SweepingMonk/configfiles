@@ -14,3 +14,4 @@
 (require 'init-web)
 ;(require 'init-powerline)
 (require 'init-flycheck)
+(require 'init-helm)

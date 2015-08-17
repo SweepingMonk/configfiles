@@ -51,6 +51,19 @@ That is, a string used to represent it on the tab bar."
 		       (length (tabbar-view
 				(tabbar-current-tabset)))))))))
 
+;; change tab bar group function
+;(setq tabbar-buffer-groups-function
+;      (lambda ()
+;	(let ((dir (expand-file-name default-directory)))
+;	  (cond ((member (buffer-name) '("*Completions*"
+;					 "*scratch*"
+;					 "*Messages*"
+;					 "*Ediff Registry*"))
+;		 (list "#misc"))
+;		((string-match-p "/.emacs.d/" dir)
+;		 (list ".emacs.d"))
+;		(t (list dir))))))
+
 (tabbar-mode 1)
 
 (provide 'init-tabbar)
