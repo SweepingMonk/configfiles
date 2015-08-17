@@ -6,6 +6,7 @@
 (global-set-key (kbd "M-p") 'tabbar-backward)
 (global-set-key (kbd "M-n") 'tabbar-forward)
 
+(setq tabbar-use-images nil)
 ;;设置tabbar的外观
 ;;设置默认主题：字体，前景和背景色，大小
 (defun custom-tabbar-face ()
