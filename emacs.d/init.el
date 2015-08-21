@@ -10,7 +10,7 @@
 (require 'init-smex)
 (require 'init-evil)
 (require 'init-yasnippet)
-(require 'init-tabbar)
+;(require 'init-tabbar)
 (require 'init-web)
 ;(require 'init-powerline)
 (require 'init-flycheck)
