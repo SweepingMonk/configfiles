@@ -22,6 +22,9 @@
 	    (setq web-mode-css-indent-offset 2)
 	    (setq web-mode-style-padding 2)
 	    (setq web-mode-script-padding 2)))
+
+;; highlight the current element
+(setq web-mode-enable-current-element-highlight t)
 ;; enable auto pairing
 ;;(setq web-mode-enable-auto-pairing t)
 (provide 'init-web)

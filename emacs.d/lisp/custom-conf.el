@@ -48,6 +48,9 @@
 (setq c-default-style "linux"
       c-basic-offset 4)
 
+(define-coding-system-alias 'utf8 'utf-8)
+(define-coding-system-alias 'UTF-8 'utf-8)
+
 ;; save the last position of edited file
 (require 'saveplace)
 (setq-default sava-place t)
