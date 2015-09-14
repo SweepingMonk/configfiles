@@ -5,7 +5,13 @@
 
 ;;(require 'color-theme)
 ;;(color-theme-initialize)
-(setq my-color-theme 'solarized)
+
+(defvar my-color-theme 'solarized)
+(defvar default-font-family "Monaco" "The default font name")
+(defvar prefer-font-family "Inconsolata")
+(defvar x-font-family (if (member prefer-font-family (font-family-list))
+			  prefer-font-family default-font-family ))
+(defvar x-font-size 16)
 
 (defun graphic-frame-action (frame)
   (set-frame-parameter frame 'background-mode 'light)
@@ -13,7 +19,7 @@
   (set-frame-parameter frame 'height 40)
   (set-frame-parameter frame 'left 200)
   (set-frame-parameter frame 'top 40)
-  (set-frame-parameter frame 'font "Monaco-13")
+  (set-frame-parameter frame 'font (format "%s-%d" x-font-family x-font-size))
   (enable-theme my-color-theme))
 
 (defun terminal-frame-action (frame)
