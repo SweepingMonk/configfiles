@@ -1,6 +1,8 @@
-;; Configuration about color-theme
+;;; Package --- config of color theme
+;;; Commentary:
+;;; Code:
 ;;(require-package 'color-theme)
-(require-package 'molokai-theme)
+;;(require-package 'molokai-theme)
 (require-package 'color-theme-solarized)
 
 ;;(require 'color-theme)
@@ -12,6 +14,14 @@
 (defvar x-font-family (if (member prefer-font-family (font-family-list))
 			  prefer-font-family default-font-family ))
 (defvar x-font-size 16)
+
+;; using Hiragino Sans GB font to render chinese character
+(set-fontset-font "fontset-default"
+		  'han
+		  (font-spec :family "Hiragino Sans GB" :size 14))
+(set-fontset-font "fontset-default"
+		  'cjk-misc
+		  (font-spec :family "Hiragino Sans GB" :size 14))
 
 (defun graphic-frame-action (frame)
   (set-frame-parameter frame 'background-mode 'light)
