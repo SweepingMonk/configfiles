@@ -15,3 +15,4 @@
 ;(require 'init-powerline)
 (require 'init-flycheck)
 (require 'init-helm)
+(require 'init-org)
