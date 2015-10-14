@@ -14,7 +14,7 @@
 (cond
  ((string-equal system-type "windows-nt") (setq default-font-family "Consolas"))
  ((string-equal system-type "darwin") (setq default-font-family "Monaco"))
- ((string-euqal system-type "gnu/linux") (setq default-font-family "Liberation Mono")))
+ ((string-equal system-type "gnu/linux") (setq default-font-family "Liberation Mono")))
 (defvar prefer-font-family "Inconsolata")
 (defvar x-font-family (if (member prefer-font-family (font-family-list))
 			  prefer-font-family default-font-family ))
