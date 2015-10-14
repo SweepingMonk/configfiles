@@ -1,18 +1,25 @@
 ;;; Package --- config of color theme
 ;;; Commentary:
 ;;; Code:
-;;(require-package 'color-theme)
-;;(require-package 'molokai-theme)
+
 (require-package 'color-theme-solarized)
 
 ;;(require 'color-theme)
 ;;(color-theme-initialize)
 
 (defvar my-color-theme 'solarized)
-(defvar default-font-family "Monaco" "The default font name")
+
+;;; font family setting
+(defvar default-font-family)
+(cond
+ ((string-equal system-type "windows-nt") (setq default-font-family "Consolas"))
+ ((string-equal system-type "darwin") (setq default-font-family "Monaco"))
+ ((string-euqal system-type "gnu/linux") (setq default-font-family "Liberation Mono")))
 (defvar prefer-font-family "Inconsolata")
 (defvar x-font-family (if (member prefer-font-family (font-family-list))
 			  prefer-font-family default-font-family ))
+
+;;; font size setting
 (defvar x-font-size 16)
 
 ;; using Hiragino Sans GB font to render chinese character
@@ -25,8 +32,8 @@
 
 (defun graphic-frame-action (frame)
   (set-frame-parameter frame 'background-mode 'light)
-  (set-frame-parameter frame 'width 100)
-  (set-frame-parameter frame 'height 40)
+  (set-frame-parameter frame 'width 115)
+  (set-frame-parameter frame 'height 38)
   (set-frame-parameter frame 'left 200)
   (set-frame-parameter frame 'top 40)
   (set-frame-parameter frame 'font (format "%s-%d" x-font-family x-font-size))

@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: shebang
+# key: sb
+# binding: direct-keybinding
+# --
+#!/usr/bin/env python

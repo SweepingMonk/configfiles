@@ -16,3 +16,4 @@
 (require 'init-flycheck)
 (require 'init-helm)
 (require 'init-org)
+(require 'init-haskell)
