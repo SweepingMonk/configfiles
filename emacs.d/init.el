@@ -2,6 +2,7 @@
 (add-to-list 'load-path (expand-file-name "lisp/" user-emacs-directory))
 
 ;;load custome configuration
+(require 'utils)
 (require 'custom-conf)
 
 ;; initialize installed packages

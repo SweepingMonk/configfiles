@@ -34,7 +34,7 @@ Plugin 'gmarik/Vundle.vim'
 
 "plugins list
 "original repos on github
-if has("python") || has("python3")
+if (has("python") || has("python3")) && version > 704
     Plugin 'SirVer/ultisnips' 
 	Plugin 'honza/vim-snippets'
 endif
