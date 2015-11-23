@@ -18,3 +18,4 @@
 (require 'init-helm)
 (require 'init-org)
 (require 'init-haskell)
+(require 'init-go-mode)
