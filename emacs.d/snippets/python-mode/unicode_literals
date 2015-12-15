@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: unicode_literals
+# key: fu
+# binding: direct-keybinding
+# group: future
+# contributor: Xiang Wang
+# --
+from __future__ import unicode_literals
