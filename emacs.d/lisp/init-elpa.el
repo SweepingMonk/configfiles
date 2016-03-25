@@ -7,16 +7,15 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
-
 ;; on-demand installation of packages
 (defun require-package (package &optional min-version no-refresh)
   (if (package-installed-p package min-version)
       t
-    (if (or (assoc package package-archive-contents) no-refresh)
+    (if no-refresh
 	(package-install package)
       (progn
 	(package-refresh-contents)
-	(require-package package min-version t)))))
+	(package-install package)))))
 
 (provide 'init-elpa)
 
