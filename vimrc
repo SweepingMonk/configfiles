@@ -113,12 +113,12 @@ if &t_Co == 256
 endif
 
 if has("gui_running")
-	colorscheme molokai
+	colorscheme solarized
 	set guioptions+=b
 	if OS() == "windows"
 		set guifont=Consolas:h12
 	elseif OS() == "mac"
-		set guifont=Monaco:h13
+		set guifont=Inconsolata:h16
 	else
 		set guifont=Monospace\ 14
 	endif
