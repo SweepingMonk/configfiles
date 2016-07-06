@@ -19,3 +19,4 @@
 (require 'init-org)
 (require 'init-haskell)
 (require 'init-go-mode)
+(require 'init-js2-mode)

@@ -1,6 +1,6 @@
 
 ;; close tool-bar and menu-bar
-(tool-bar-mode 0)
+(if window-system (tool-bar-mode 0))
 (menu-bar-mode 0)
 
 ;; cancel startup message

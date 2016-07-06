@@ -22,15 +22,13 @@
 ;;; font size setting
 (defvar x-font-size 16)
 
-;; using Hiragino Sans GB font to render chinese character
-(set-fontset-font "fontset-default"
-		  'han
-		  (font-spec :family "Hiragino Sans GB" :size 14))
-(set-fontset-font "fontset-default"
-		  'cjk-misc
-		  (font-spec :family "Hiragino Sans GB" :size 14))
-
 (defun graphic-frame-action (frame)
+  (set-fontset-font "fontset-default"
+		    'han
+		    (font-spec :family "Hiragino Sans GB" :size 14))
+  (set-fontset-font "fontset-default"
+		    'cjk-misc
+		    (font-spec :family "Hiragino Sans GB" :size 14))
   (set-frame-parameter frame 'background-mode 'dark)
   (set-frame-parameter frame 'width 115)
   (set-frame-parameter frame 'height 38)
