@@ -113,6 +113,7 @@ if &t_Co == 256
 endif
 
 if has("gui_running")
+	set background=light
 	colorscheme solarized
 	set guioptions+=b
 	if OS() == "windows"
