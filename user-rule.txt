@@ -1,0 +1,37 @@
+! Put user rules line by line in this file.
+! See https://adblockplus.org/en/filter-cheatsheet
+
+@@||netease.com
+||cloudfront.net
+||cloudup.net
+||marmalade-repo.org
+||melpa.org
+||cppreference.com
+||leetcode.com
+||zassets.com
+||6pm.com
+||nr-data.net
+||stroustrup.com
+||toptal.com
+||quoracdn.net
+||ssl-images-amazon.com
+||jshell.net
+||jsfiddle.net
+||github.com
+||github.io
+||githubusercontent.com
+||npmjs.com
+||gravatar.com
+||optimizely.com
+||mozilla.org
+||mozilla.net
+||kapeli.com
+||gitbook.com
+||gitbooks.io
+||newrelic.com
+||readthedocs.io
+||readthedocs.org
+||amazonaws.com
+||kodi.tv
+||superrepo.org
+||srp.nu
