@@ -9,17 +9,20 @@
 (defun graphic-frame-action (frame)
   "Graphic frame action, FRAME is the selected frame."
   (let* ((default-font-family (cond
-			       ((string-equal system-type "windows-nt") "Consolas")
-			       ((string-equal system-type "darwin") "Monaco")
-			       ((string-equal system-type "gnu/linux") "Liberation Mono")))
+			       ((string= system-type "windows-nt") "Consolas")
+			       ((string= system-type "darwin") "Monaco")
+			       ((string= system-type "gnu/linux") "Liberation Mono")))
 	 (prefer-font-family "Inconsolata")
 	 (x-font-family (if (member prefer-font-family (font-family-list))
 			    prefer-font-family default-font-family))
-	 (x-font-size 16)
+	 (x-font-size (cond
+		       ((string= system-type "windows-nt") 13)
+		       ((string= system-type "darwin") 16)
+		       ((string= system-type "gnu/linux") 14)))
 	 (chinese-font-family (cond
-			       ((string-equal system-type "windows-nt") "Microsoft Yahei")
-			       ((string-equal system-type "darwin") "Hiragino Sans GB")
-			       ((string-equal system-type "gnu/linux") "Microsoft Yahei"))))
+			       ((string= system-type "windows-nt") "Microsoft Yahei")
+			       ((string= system-type "darwin") "Hiragino Sans GB")
+			       ((string= system-type "gnu/linux") "Microsoft Yahei"))))
     (set-fontset-font "fontset-default"
 		      'han
 		      (font-spec :family chinese-font-family :size 14))
