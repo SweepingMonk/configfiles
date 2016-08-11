@@ -21,3 +21,4 @@
 (require 'init-go-mode)
 (require 'init-js2-mode)
 (require 'init-smart-mode-line)
+(require 'init-markdown-mode)
