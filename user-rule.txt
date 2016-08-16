@@ -37,3 +37,7 @@
 ||srp.nu
 ||sourcegraph.com
 ||amazonaws.com
+||locust.io
+||rackcdn.com
+||hdcmct.org
+||amazon.com
