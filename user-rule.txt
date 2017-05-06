@@ -42,3 +42,5 @@
 ||hdcmct.org
 ||amazon.com
 ||ssl-images-amazon.com
+||brendangregg.com
+||facebook.net

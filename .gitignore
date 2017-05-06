@@ -2,8 +2,11 @@
 elpa/
 site-lisp/*
 *~
+\.*
+*\.swp
 auto-save-list/
 smex-items
 saved-places
 .DS_store
 eshell
+vim.d/plugged/*

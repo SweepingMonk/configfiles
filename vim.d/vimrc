@@ -1,0 +1,22 @@
+" ==================================
+" Salted Fish's vim configurations
+" ==================================
+
+
+let g:vimdir = '~/.vim'
+
+
+" this time just load plugin register code
+exec 'source ' . g:vimdir . '/plugins.vim'
+
+" all custom vim settings
+exec 'source ' . g:vimdir . '/settings.vim'
+
+" this time load plugin configurations
+exec 'source ' . g:vimdir . '/plugin_settings.vim'
+
+" all custom mappings
+exec 'source ' . g:vimdir . '/mappings.vim'
+
+" all autocmds
+exec 'source ' . g:vimdir . '/autocmds.vim'
