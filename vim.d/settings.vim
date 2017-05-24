@@ -115,3 +115,8 @@ set incsearch		" do incremental searching
 set smartcase       " do smart case matching
 set showmatch       "show matching brackets
 set hlsearch
+
+" auto change to directory in which current buffer is
+if exists('+autochdir')
+	set autochdir
+endif

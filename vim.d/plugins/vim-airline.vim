@@ -15,5 +15,5 @@ let g:airline_left_sep = '>'
 let g:airline_right_sep = '<'
 
 " let g:airline#extensions#bufferline#enabled = 1
-let g:airline_theme = 'solarized' " using solarized theme
+" let g:airline_theme = 'solarized' " using solarized theme
 let g:airline#extensions#tabline#enabled = 1 " enable tabline
