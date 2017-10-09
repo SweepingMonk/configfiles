@@ -1,7 +1,12 @@
 " ==================================================
 " auto commands
 " ==================================================
-
+fun! RemoveTrailingWhitespace()
+	let l = line(".")
+	let c = col(".")
+	%s/\s\+$//e
+	call cursor(l, c)
+endfun
 
 if has('autocmd')
 	augroup NonPluginAutoCommands
@@ -18,6 +23,9 @@ if has('autocmd')
 
 		" auto expend tab to spaces while file type is python
 		autocmd FileType python set expandtab
+
+		" auto removing trailing whitespace
+		autocmd BufWritePre * :call RemoveTrailingWhitespace()
 	augroup END
 endif
 

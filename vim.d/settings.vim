@@ -70,15 +70,9 @@ endif
 " ========================================
 " colorscheme settings
 " ========================================
-set background=dark
-
-if &t_Co == 256
-	silent! colorscheme solarized
-endif
-
 if has("gui_running")
 	set background=light
-	silent! colorscheme solarized
+	silent! colorscheme Tomorrow-Night
 	set guioptions+=b
 	if OS() == "windows"
 		set guifont=Consolas:h12
@@ -86,6 +80,11 @@ if has("gui_running")
 		set guifont=Inconsolata:h16
 	else
 		set guifont=Monospace\ 14
+	endif
+else
+	set background=dark
+	if &t_Co == 256
+		silent! colorscheme Vim-Tomorrow-Night
 	endif
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
