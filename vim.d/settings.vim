@@ -79,7 +79,7 @@ if has("gui_running")
 	elseif OS() == "mac"
 		set guifont=Inconsolata:h16
 	else
-		set guifont=Monospace\ 14
+		set guifont=Inconsolata\ 14
 	endif
 else
 	set background=dark
@@ -118,4 +118,10 @@ set hlsearch
 " auto change to directory in which current buffer is
 if exists('+autochdir')
 	set autochdir
+endif
+
+" disable menubar and toolbar
+if has("gui_running")
+	set guioptions -=m
+	set guioptions -=T
 endif
