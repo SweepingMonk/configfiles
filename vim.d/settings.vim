@@ -79,7 +79,7 @@ if has("gui_running")
 	elseif OS() == "mac"
 		set guifont=Inconsolata:h16
 	else
-		set guifont=Inconsolata\ 11
+		set guifont=Inconsolata\ 13
 	endif
 else
 	set background=dark
