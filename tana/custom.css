@@ -4,3 +4,7 @@ html {
 	--fontStackMonospace: IBM Plex Mono, Ping Fang SC, monospace !important;
 	--baseFontSize: 16px !important;
 }
+
+div.itemdone-checkbox span.editable {
+	text-decoration: line-through;
+}
