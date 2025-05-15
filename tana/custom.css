@@ -2,7 +2,7 @@ html {
 	--fontStackNormal: IBM Plex Sans, Ping Fang SC, sans-serif !important;
 	--fontStackNormalVariable: IBM Plex Sans, Ping Fang SC, sans-serif !important;
 	--fontStackMonospace: IBM Plex Mono, Ping Fang SC, monospace !important;
-	--baseFontSize: 16px !important;
+	--baseFontSize: 17px !important;
 }
 
 div.itemdone-checkbox span.editable {
