@@ -1,0 +1,12 @@
+font-family = "Google Sans Code"
+font-family = "Source Han Sans SC VF"
+font-size = 16
+#font-style = "SemiBold"
+#font-style-bold = "ExtraBold"
+font-thicken = true
+theme = Dracula+
+cursor-style = block
+shell-integration-features = no-cursor
+background-opacity = 0.9
+background-blur = true
+macos-background-from-layer = true
