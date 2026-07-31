@@ -10,13 +10,13 @@ END_MARKER = "/* TANA_CUSTOM_CSS_END */"
 
 CSS_STYLES_RAW = """
 html {
-    --fontStackNormal: '方正悠宋+ GBK', IBM Plex Sans, Source Han Sans SC VF, Ping Fang SC, sans-serif !important;
-    --fontStackNormalVariable: '方正悠宋+ GBK', IBM Plex Sans, Source Han Sans SC VF, Ping Fang SC, sans-serif !important;
-    --fontStackMonospace: '0xProto Nerd Font', Google Sans Code, IBM Plex Mono, Source Han Sans SC VF, Ping Fang SC, monospace !important;
+    --fontStackNormal: Comic Neue, Inter, Roboto Flex, 方正悠黑, Source Han Sans SC VF, Ping Fang SC, sans-serif !important;
+    --fontStackNormalVariable: Comic Neue, Inter, Roboto Flex, 方正悠黑, Source Han Sans SC VF, Ping Fang SC, sans-serif !important;
+    --fontStackMonospace: Maple Mono, Google Sans Code, IBM Plex Mono, 方正悠黑, Source Han Sans SC VF, Ping Fang SC, monospace !important;
     --baseFontSize: 17px !important;
 }
 body {
-    font-weight: 500;
+    font-weight: 400;
 }
 div.itemdone-checkbox span.editable {
     text-decoration: line-through;
