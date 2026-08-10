@@ -1,12 +1,14 @@
-font-family = "IBM Plex Mono"
-font-family = "Source Han Sans SC VF"
+font-family = "Maple Mono CN"
+# font-family = "方正悠黑"
 font-size = 16
 #font-style = "SemiBold"
 #font-style-bold = "ExtraBold"
 font-thicken = true
-theme = Dracula+
+#theme = Dracula+
+theme = Catppuccin Mocha
 cursor-style = block
 shell-integration-features = no-cursor
 background-opacity = 0.9
 background-blur = true
 macos-background-from-layer = true
+font-shaping-break = no-cursor
