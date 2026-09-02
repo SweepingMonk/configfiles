@@ -10,9 +10,9 @@ END_MARKER = "/* TANA_CUSTOM_CSS_END */"
 
 CSS_STYLES_RAW = """
 html {
-    --fontStackNormal: Comic Neue, Inter, Roboto Flex, 方正悠黑, Source Han Sans SC VF, Ping Fang SC, sans-serif !important;
-    --fontStackNormalVariable: Comic Neue, Inter, Roboto Flex, 方正悠黑, Source Han Sans SC VF, Ping Fang SC, sans-serif !important;
-    --fontStackMonospace: Maple Mono, Google Sans Code, IBM Plex Mono, 方正悠黑, Source Han Sans SC VF, Ping Fang SC, monospace !important;
+    --fontStackNormal: 霞鹜文楷, Comic Neue, Inter, Roboto Flex, 方正悠黑, Source Han Sans SC VF, Ping Fang SC, sans-serif !important;
+    --fontStackNormalVariable: 霞鹜文楷, Comic Neue, Inter, Roboto Flex, 方正悠黑, Source Han Sans SC VF, Ping Fang SC, sans-serif !important;
+    --fontStackMonospace: 霞鹜文楷等宽, Maple Mono, Google Sans Code, IBM Plex Mono, 方正悠黑, Source Han Sans SC VF, Ping Fang SC, monospace !important;
     --baseFontSize: 17px !important;
 }
 body {
